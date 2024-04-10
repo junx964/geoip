@@ -81,6 +81,13 @@ jobs:
             sha256sum ${name} > ./${name}.sha256sum
           done
 
+      - name: Generate sha256 checksum for text files
+        run: |
+          cd ./output/text || exit 1
+          for name in $(ls *.txt); do
+            sha256sum ${name} > ./${name}.sha256sum
+          done
+
       - name: Download GeoLite2
         env:
           LICENSE_KEY: ${{ secrets.MAXMIND_GEOLITE2_LICENSE }}
