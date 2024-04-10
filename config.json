@@ -194,7 +194,7 @@
     },
     {
       "type": "text",
-      "action": "output"
+      "action": "output",
       "args": {
         "outputName": "cn.txt",
         "wantedList": ["cn"],
